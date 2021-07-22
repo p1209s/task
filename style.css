@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    width: 20%;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav-item a {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: xx-large;
+    color: black;
+}
+
+.nav-items {
+    list-style: none;
+}
+
+.nav-items a {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: grey;
+}
+
+.nav-items a.active {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.nav-items a:hover {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.cart {
+    margin-left: 40px;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 10px 40px;
+    color: white;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin-top: -500px;
+    margin-left: 100px;
+}
+
+.main {
+    width: 80%;
+    float: left;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 55px;
+    margin-left: 200px;
+}
+
+.para {
+    width: 20%;
+    float: right;
+    color: grey;
+    margin-right: 200px;
+    margin-top: -180px;
+    /* border-bottom: 2px solid red; */
+    padding-bottom: 20px;
+    position: relative;
+}
+
+hr {
+    width: 20%;
+    position: absolute;
+    left: 0;
+    background-color: red
+}
+
+.card {
+    margin-left: 200px;
+    display: flex;
+    position: absolute;
+    margin-top: 250px;
+}
+
+.cards {
+    display: inline-block;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 70%;
+    padding: 35px 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    #check {
+        display: none;
+    }
+    label #btn {
+        position: absolute;
+        cursor: pointer;
+        left: 40px;
+        top: 25px;
+        font-size: 35px;
+        color: red;
+    }
+    .nav {
+        margin-left: -250px;
+        transition: all .5s ease;
+    }
+    #check:checked~.nav {
+        margin-left: 0;
+    }
+    #check:checked~label #btn {
+        margin-left: 120px;
+        transition: all .5s;
+    }
+    .main {
+        float: none;
+        font-size: 25px;
+        margin-left: 0;
+        margin-top: 200px;
+    }
+    .card {
+        margin-left: 0;
+        margin-top: 0;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .card img {
+        border-radius: 50%;
+        width: 80%;
+        padding: 40px 10px;
+    }
+    .cards {
+        width: 35%;
+    }
+    .para {
+        width: 70%;
+        float: right;
+        color: grey;
+        margin-right: 100px;
+        margin-top: 225px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+    hr {
+        width: 20%;
+        position: absolute;
+        left: 0;
+        background-color: red
+    }
+    #cart {
+        color: red;
+        font-size: 35px;
+        float: right;
+        margin-right: 20px;
+        margin-top: -360px;
+        cursor: pointer;
+    }
+    .noodles,
+    input,
+    .nav-item {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #check,
+    #btn,
+    #cart {
+        display: none;
+    }
+}
